@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lianggao.dao.DangerApplicationMapper">
+  <resultMap id="BaseResultMap" type="com.lianggao.bean.Application">
+    <result column="TaskID" jdbcType="INTEGER" property="TaskID" />
+    <result column="DangerTaskNum" jdbcType="VARCHAR" property="DangerTaskNum" />
+    <result column="DangerTaskName" jdbcType="INTEGER" property="DangerTaskName" />
+    <result column="DangerTaskLevel" jdbcType="VARCHAR" property="DangerTaskLevel" />
+    <result column="Category" jdbcType="VARCHAR" property="Category" />
+    <result column="Applicant" jdbcType="VARCHAR" property="Applicant" />
+
+    <result column="TaskInstitution" jdbcType="VARCHAR" property="TaskInstitution" />
+    <result column="ApplyingTime" jdbcType="INTEGER" property="ApplyingTime" />
+    <result column="StartTime" jdbcType="VARCHAR" property="StartTime" />
+    <result column="EndTime" jdbcType="VARCHAR" property="EndTime" />
+    <result column="UploadFileName" jdbcType="VARCHAR" property="UploadFileName" />
+    <result column="State" jdbcType="VARCHAR" property="State" />
+    <result column="Archived" jdbcType="VARCHAR" property="Archived" />
+    <result column="ApproverList" jdbcType="VARCHAR" property="ApproverList" />
+  </resultMap>
+
+  <select id="insertDangerApplication"  parameterType="com.lianggao.bean.DangerApplication" resultType="java.lang.Integer">
+    SET IDENTITY_INSERT DangerTaskApplicationTable_T ON
+    insert into DangerTaskApplicationTable_T
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="TaskID != null">
+        TaskID,
+      </if>
+      <if test="DangerTaskNum != null">
+        DangerTaskNum,
+      </if>
+      <if test="DangerTaskName != null">
+        DangerTaskName,
+      </if>
+      <if test="DangerTaskLevel != null">
+        DangerTaskLevel,
+      </if>
+      <if test="Category != null">
+        Category,
+      </if>
+      <if test="Applicant != null">
+        Applicant,
+      </if>
+      <if test="TaskInstitution != null">
+        TaskInstitution,
+      </if>
+      <if test="ApplyingTime != null">
+        ApplyingTime,
+      </if>
+      <if test="StartTime != null">
+        StartTime,
+      </if>
+      <if test="EndTime != null">
+        EndTime,
+      </if>
+      <if test="UploadFileName != null">
+        UploadFileName,
+      </if>
+      <if test="State != null">
+        State,
+      </if>
+      <if test="Archived != null">
+        Archived,
+      </if>
+      <if test="ApproverList != null">
+        ApproverList,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="TaskID != null">
+        #{TaskID,jdbcType=INTEGER},
+      </if>
+      <if test="DangerTaskNum != null">
+        #{DangerTaskNum,jdbcType=VARCHAR},
+      </if>
+      <if test="DangerTaskName != null">
+        #{DangerTaskName,jdbcType=VARCHAR},
+      </if>
+      <if test="DangerTaskLevel != null">
+        #{DangerTaskLevel,jdbcType=VARCHAR},
+      </if>
+      <if test="Category != null">
+        #{Category,jdbcType=VARCHAR},
+      </if>
+      <if test="Applicant != null">
+        #{Applicant,jdbcType=VARCHAR},
+      </if>
+      <if test="TaskInstitution != null">
+        #{TaskInstitution,jdbcType=VARCHAR},
+      </if>
+      <if test="ApplyingTime != null">
+        #{ApplyingTime,jdbcType=VARCHAR},
+      </if>
+      <if test="StartTime != null">
+        #{StartTime,jdbcType=VARCHAR},
+      </if>
+      <if test="EndTime != null">
+        #{EndTime,jdbcType=VARCHAR},
+      </if>
+      <if test="UploadFileName != null">
+        #{UploadFileName,jdbcType=VARCHAR},
+      </if>
+      <if test="state != null">
+        #{state,jdbcType=VARCHAR},
+      </if>
+      <if test="Archived != null">
+        #{Archived,jdbcType=VARCHAR},
+      </if>
+      <if test="ApproverList != null">
+        #{ApproverList,jdbcType=VARCHAR},
+      </if>
+    </trim>
+    select SCOPE_IDENTITY()
+  </select>
+</mapper>

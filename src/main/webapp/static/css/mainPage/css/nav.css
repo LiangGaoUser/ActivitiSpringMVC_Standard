@@ -1,0 +1,192 @@
+@charset "utf-8";
+/* 以下实际使用若已初始化可删除 .nav height父级需逐级设置为100%*/
+body, html {
+    height: 100%;
+}
+
+body, ul {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    /*font: 1.5em "Arial", HELVETICA;*/
+    font-weight: bold;
+    -webkit-text-size-adjust: 100%;
+}
+
+li {
+    list-style: none
+}
+
+a {
+    text-decoration: none;
+    color: #ccc
+}
+
+span {
+    color: #ccc
+}
+
+span:hover, span:after {
+    color: #fff
+}
+
+/* 以上实际使用若已初始化可删除 */
+
+/* nav */
+.nav {
+    font:1.3em "微软雅黑";
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+    background: #263238;
+    transition: all .3s;
+}
+
+.nav a {
+    display: block;
+    overflow: hidden;
+    padding-left: 1.67em;
+    line-height: 3em;
+    max-height: 3em;
+    transition: all .3s;
+}
+
+.nav a span {
+    margin-left: 2em;
+}
+
+.nav-item {
+    position: relative;
+    background-color: #001122;
+    color: #ccc
+}
+
+.nav-item.nav-show {
+    border-bottom: none;
+    color: #fff
+}
+
+.nav-item.nav-show li {
+    background: rgba(0, 0, 0)
+}
+
+.nav-item ul {
+    display: none;
+    background: rgba(0, 0, 0);
+}
+
+.nav-item.nav-show ul {
+    display: block;
+}
+
+.nav-item > a:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 0.167em;
+    height: 3em;
+    transition: all .3s;
+}
+
+.nav-item > a:after {
+    color: #fff;
+    text-decoration: #fff
+}
+
+.nav .nav-icon {
+    font-size: 0.8em;
+    position: absolute;
+    margin-left: -0.02em;
+}
+
+.nav-item > ul > li > a.nav-select {
+    background-color: #3385ff;
+}
+
+/* 此处修改导航图标 可自定义iconfont 替换*/
+.icon_1::after {
+    content: "\e62b";
+}
+
+.icon_2::after {
+    content: "\e669";
+}
+
+.icon_3::after {
+    content: "\e61d";
+}
+
+/*---------------------*/
+.nav-more {
+    float: right;
+    margin-right: 1.4em;
+    font-size: 0.8em;
+    transition: transform .3s;
+}
+
+/* 此处为导航右侧箭头 如果自定义iconfont 也需要替换*/
+.nav-more::after {
+    content: "\e621";
+}
+
+/*---------------------*/
+.nav-show .nav-more {
+    transform: rotate(90deg);
+    background: rgba(0, 0, 0, 0);
+}
+
+.nav-show, .nav-item > a:hover {
+    color: #FFF;
+}
+
+.nav-show > a:before, .nav-item > a:hover:before {
+    color: #ccc
+}
+
+.nav-show > a, .nav-item > a:hover {
+    color: #FFF;
+}
+
+/* nav-mini */
+.nav-mini.nav {
+    width: 4em;
+}
+
+.nav-mini.nav .nav-item > a span {
+    display: none;
+}
+
+.nav-mini.nav .nav-more {
+    margin-right: -1.67em;
+}
+
+.nav-mini.nav .nav-item ul {
+    position: absolute;
+    top: 0;
+    left: 4em;
+    width: 12em;
+    z-index: 99;
+    overflow: hidden;
+}
+
+.nav-mini.nav .nav-item:hover {
+    background: rgba(255, 255, 255);
+}
+
+.nav-mini.nav .nav-item:hover .nav-item a {
+    color: #FFF;
+}
+
+.nav-mini.nav .nav-item:hover a:before {
+}
+
+.nav-mini.nav .nav-item:hover ul {
+    display: block;
+}
+
+
+
+
+

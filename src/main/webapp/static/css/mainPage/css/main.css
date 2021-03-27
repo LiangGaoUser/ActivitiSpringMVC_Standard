@@ -1,0 +1,232 @@
+page {
+	height: 100%;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+.left {
+	transition: all .3s;
+	/*border:1px solid #e8e8e8;*/
+	height: 100%;
+	float: left;
+	width: 15%;
+	box-sizing: border-box;
+	background-color: #001122;
+	
+	display: block;
+}
+
+.left .logo {
+	width: 100%;
+	height: 7%;
+	box-sizing: border-box;
+	/*border-bottom: 0.05em solid silver;*/
+	background-color: #001122;
+}
+
+.left .searchArea {
+	display: none;
+	padding: 0.5em 0;
+	width: 100%;
+	height: 6%;
+	box-sizing: border-box;
+	border-top: 0.05em solid silver;
+}
+
+.left .searchArea #searchMenu {
+	height: 100%;
+	padding: 1em
+}
+
+.left .menu {
+
+}
+
+@keyframes showhide {
+	from {
+		display: block;
+	}
+	to {
+		display: none;
+	}
+}
+
+/*.lefthide{*/
+/*animate:showhide 1s;*/
+/*}*/
+.right {
+	display: inline-block;
+	/*border:0.05em solid silver;*/
+	float: right;
+	width: 85%;
+	box-sizing: border-box;
+	height: 100%;
+}
+
+.right .header {
+	height: 7%;
+	/*border:0.05em solid silver;*/
+	border-bottom: 0.05em solid silver;
+	box-sizing: border-box;
+	background-color: #fff;
+	width: 100%;
+}
+
+.right .header .foldicon img {
+	width: 39px;
+	height: 39px;
+	float: left;
+}
+
+.right .header .userinfo {
+	/*padding-right: 1em;*/
+	display: inline-block;
+	float: right;
+	color: #3c3c3c;
+	font-size: 1em;
+	font-family: 'Helvetica Neue', Helvetica, Arial, 'Microsoft Yahei',
+		'Hiragino Sans GB', 'Heiti SC', 'WenQuanYi Micro Hei', sans-serif;
+	/*width:25em;*/
+	height: 100%;
+	
+	width:250px;
+}
+.right .header .userinfo .defaultimg .defaultimage{
+	margin-right:10px;
+	 
+}
+.right .header .userinfo .defaultimg img {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	/*float: right;*/
+	/*margin-right:10px;*/
+	
+	float:left;
+	 
+ 
+}
+.user-card {
+	position: absolute;
+	top:0;
+	right: 50px;
+	width: 160px;
+	height: 110px;
+	 
+	z-index: 1000;
+	background-color: #fff;
+	/*background-color: red;*/
+	display:none;
+	margin-right:110px;
+}
+
+.user-card .card-top img {
+	width: 45px;
+	height: 45px;
+	border-radius: 50%;
+	margin-left: 55px;
+}
+
+.user-card .card-top .name {
+	display: inline-block;
+	font-size: 15px;
+	margin-left: 65px;
+	color: #1890ff;
+}
+.l {
+	float: left;
+}
+
+.user-card .user-center-box {
+	margin-top: 5px;
+}
+
+.user-card .user-center-box ul li {
+	position: relative;
+	margin-bottom: 10px;
+	line-height: 10px;
+}
+
+.user-card .user-center-box ul li .user-center-title {
+	position: relative;
+	 
+	color: grey;
+	text-align: center;
+	 margin-left:10px;
+}
+/*
+.user-card .user-center-box ul li .user-center-content {
+	position: relative;
+	 
+	color: grey;
+	text-align: center;
+	 margin-left:30px;
+}*/
+.userinfo .defaultimg{
+	 
+}
+.userinfo .defaultimg .rightinfo{
+	float:right;
+	 
+}
+ 
+
+.right .header .userinfo .defaultimg .rightinfo ul li {
+	padding: 0em 1em 0em 0em;
+	float: left;
+	
+	 line-height:40px;
+	 position: relative;
+	  
+	/*line-height: 5em;*/
+}
+ 
+
+.right .header .userinfo a {
+	transition: all 0.3s;
+	text-decoration: none;
+}
+
+.right .header .userinfo a:hover {
+	color: #1890ff;
+}
+
+.right .header .userinfo a:visited {
+	color: #1890ff;
+}
+
+
+.right .contentMain {
+	height: 93%;
+	/*border-top: 0.05em solid silver;*/
+	box-sizing: border-box;
+}
+
+#rightFrame {
+	width: 100%;
+	height: 99%;
+	box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+	width: 0.4em;
+	padding-right: 0.2em;
+	background-color: grey;
+	/*其他样式，比如圆角等*/
+}
+
+/*滑块样式*/
+::-webkit-scrollbar-thumb {
+	-webkit-border-radius: 0.2em;
+	border-radius: 0.2em;
+	background-color: #ccc;
+}
+
+/*当前窗口失去焦点时的滑块样式*/
+::-webkit-scrollbar-thumb:window-inactive {
+	background-color: blue;
+}
